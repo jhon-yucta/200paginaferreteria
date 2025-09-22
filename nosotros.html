@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Ferretería El Martillo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 2rem;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .historia-timeline {
+            position: relative;
+            margin: 3rem 0;
+            padding-left: 2rem;
+        }
+        
+        .historia-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #ff6b35, #f7931e);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: #ff6b35;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #ff6b35;
+        }
+        
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .miembro-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .miembro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .miembro-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .certificaciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .certificacion {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .certificacion:hover {
+            transform: scale(1.05);
+        }
+        
+        .certificacion-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Ferretería El Martillo</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" target="_blank">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="ubicacion.html" target="_blank">Ubicación</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-button">← Volver al Inicio</a>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>👥 Acerca de Nosotros</h1>
+        <p>Conoce nuestra historia, valores y el equipo que hace posible nuestro éxito</p>
+    </section>
+
+    <!-- Historia Section -->
+    <section class="section">
+        <h2>📈 Nuestra Historia</h2>
+        <div class="historia-timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1999</div>
+                <h3>Los Inicios</h3>
+                <p>Comenzamos como un pequeño negocio familiar con la visión de ofrecer herramientas de calidad a precios justos. Nuestro primer local tenía apenas 50m² pero mucha pasión por servir a la comunidad.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2005</div>
+                <h3>Primera Expansión</h3>
+                <p>Gracias a la confianza de nuestros clientes, pudimos ampliar nuestro local y diversificar nuestro catálogo, incorporando materiales de construcción y herramientas eléctricas.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2012</div>
+                <h3>Certificaciones de Calidad</h3>
+                <p>Obtuvimos nuestras primeras certificaciones ISO y nos convertimos en distribuidores autorizados de las principales marcas del mercado, garantizando calidad y garantía en todos nuestros productos.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2018</div>
+                <h3>Era Digital</h3>
+                <p>Lanzamos nuestra plataforma digital y servicio de delivery, adaptándonos a las nuevas necesidades del mercado sin perder el trato personalizado que nos caracteriza.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <h3>Líderes del Sector</h3>
+                <p>Hoy somos reconocidos como la ferretería líder en la región, con más de 25 años de experiencia y la confianza de miles de clientes satisfechos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section class="section">
+        <h2>👨‍👩‍👧‍👦 Nuestro Equipo</h2>
+        <div class="equipo-grid">
+            <div class="miembro-card">
+                <div class="miembro-avatar">👨‍💼</div>
+                <h3>Carlos Martínez</h3>
+                <p><strong>Gerente General</strong></p>
+                <p>25 años de experiencia en el sector ferretero. Especialista en materiales de construcción y gestión comercial.</p>
+            </div>
+            
+            <div class="miembro-card">
+                <div class="miembro-avatar">👩‍🔧</div>
+                <h3>Ana Rodriguez</h3>
+                <p><strong>Jefa de Ventas</strong></p>
+                <p>Experta en herramientas eléctricas y asesoramiento técnico. 15 años ayudando a clientes a encontrar la solución perfecta.</p>
+            </div>
+            
+            <div class="miembro-card">
+                <div class="miembro-avatar">👨‍🏭</div>
+                <h3>Miguel Torres</h3>
+                <p><strong>Especialista en Construcción</strong></p>
+                <p>Ingeniero civil con amplio conocimiento en materiales y técnicas de construcción. Nuestro consultor técnico principal.</p>
+            </div>
+            
+            <div class="miembro-card">
+                <div class="miembro-avatar">👩‍💻</div>
+                <h3>Laura Vega</h3>
+                <p><strong>Coordinadora de Logística</strong></p>
+                <p>Encargada de garantizar que todos nuestros productos lleguen a tiempo y en perfectas condiciones a nuestros clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones Section -->
+    <section class="section">
+        <h2>🏆 Certificaciones y Reconocimientos</h2>
+        <div class="certificaciones">
+            <div class="certificacion">
+                <div class="certificacion-icon">🎖️</div>
+                <h3>ISO 9001:2015</h3>
+                <p>Certificación de Calidad en Gestión</p>
+            </div>
+            
+            <div class="certificacion">
+                <div class="certificacion-icon">🏅</div>
+                <h3>Mejor Ferretería 2023</h3>
+                <p>Premio Cámara de Comercio</p>
+            </div>
+            
+            <div class="certificacion">
+                <div class="certificacion-icon">⭐</div>
+                <h3>5 Estrellas</h3>
+                <p>Calificación promedio clientes</p>
+            </div>
+            
+            <div class="certificacion">
+                <div class="certificacion-icon">🤝</div>
+                <h3>Distribuidores Oficiales</h3>
+                <p>+20 marcas reconocidas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>🎯 Nuestra Misión</h2>
+                <p>Ser el socio estratégico de constructores, profesionales y particulares, proporcionando productos de la más alta calidad, asesoramiento experto y un servicio excepcional que contribuya al éxito de cada proyecto.</p>
+                
+                <h2>🔮 Nuestra Visión</h2>
+                <p>Ser reconocidos como la ferretería líder y más confiable de la región, expandiendo nuestro alcance mientras mantenemos nuestros valores familiares y compromiso con la excelencia en el servicio.</p>
+                
+                <h2>💎 Nuestros Valores</h2>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>✅ <strong>Calidad:</strong> Solo ofrecemos productos que cumplen los más altos estándares</li>
+                    <li>🤝 <strong>Confianza:</strong> Construimos relaciones duraderas basadas en la honestidad</li>
+                    <li>🎯 <strong>Compromiso:</strong> Estamos dedicados al éxito de nuestros clientes</li>
+                    <li>🌱 <strong>Innovación:</strong> Nos adaptamos constantemente a las nuevas tecnologías</li>
+                    <li>👨‍👩‍👧‍👦 <strong>Familia:</strong> Mantenemos nuestro espíritu familiar en todo lo que hacemos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Ferretería El Martillo. Todos los derechos reservados.</p>
+        <p>Construyendo sueños desde 1999</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>

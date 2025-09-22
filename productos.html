@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferretería El Martillo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        
+ .page-header {
+    background: url('minifondo.jpg') center center / cover no-repeat;
+    color: white;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+/* Fondo oscuro semitransparente encima de la imagen */
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* oscurece un poco la imagen */
+    z-index: 0;
+}
+
+.page-header h1,
+.page-header p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+        
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 2rem;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .productos-detalle {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .categoria-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .categoria-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #ff6b35;
+        }
+        
+        .categoria-lista {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .categoria-lista li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .categoria-lista li:last-child {
+            border-bottom: none;
+        }
+        
+        .precio {
+            color: #ff6b35;
+            font-weight: bold;
+        }
+        
+        .stock {
+            background: #28a745;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .stock.agotado {
+            background: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Ferretería El Martillo</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
+                    <li><a href="ubicacion.html" target="_blank">Ubicación</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-button">← Volver al Inicio</a>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>🛠️ Nuestros Productos</h1>
+        <p>Catálogo completo de herramientas y materiales de construcción</p>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="section">
+        <div class="productos-detalle">
+            <div class="categoria-card">
+    <div class="producto-icon">🔧</div>
+    <h3>Herramientas Manuales</h3>
+    <ul class="categoria-lista">
+        <li>Martillo de acero 500g <span class="precio">S/. 25.00</span> <span class="stock">En stock</span></li>
+        <li>Destornilladores Phillips (set 6 pcs) <span class="precio">S/. 35.00</span> <span class="stock">En stock</span></li>
+        <li>Alicate universal 8" <span class="precio">S/. 28.00</span> <span class="stock">En stock</span></li>
+        <li>Llave inglesa 12" <span class="precio">S/. 45.00</span> <span class="stock">En stock</span></li>
+        <li>Sierra para madera 22" <span class="precio">S/. 38.00</span> <span class="stock agotado">Agotado</span></li>
+    </ul>
+    <div style="text-align: center; margin-top: 1rem;">
+        <a href="herramientas-manuales.html" class="ver-mas-btn">Ver más</a>
+    </div>
+</div>
+
+
+            <div class="categoria-card">
+                <div class="producto-icon">⚡</div>
+                <h3>Herramientas Eléctricas</h3>
+                <ul class="categoria-lista">
+                    <li>Taladro percutor 650W <span class="precio">S/. 180.00</span> <span class="stock">En stock</span></li>
+                    <li>Amoladora 4.5" 850W <span class="precio">S/. 120.00</span> <span class="stock">En stock</span></li>
+                    <li>Sierra circular 7.25" <span class="precio">S/. 220.00</span> <span class="stock">En stock</span></li>
+                    <li>Atornillador inalámbrico <span class="precio">S/. 95.00</span> <span class="stock">En stock</span></li>
+                    <li>Lijadora orbital 220W <span class="precio">S/. 85.00</span> <span class="stock agotado">Agotado</span></li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <div class="producto-icon">🏗️</div>
+                <h3>Materiales de Construcción</h3>
+                <ul class="categoria-lista">
+                    <li>Cemento Portland x 42.5kg <span class="precio">S/. 28.50</span> <span class="stock">En stock</span></li>
+                    <li>Arena gruesa x m³ <span class="precio">S/. 45.00</span> <span class="stock">En stock</span></li>
+                    <li>Ladrillo King Kong x unidad <span class="precio">S/. 0.85</span> <span class="stock">En stock</span></li>
+                    <li>Fierro corrugado 1/2" x 9m <span class="precio">S/. 32.00</span> <span class="stock">En stock</span></li>
+                    <li>Alambre negro #8 x kg <span class="precio">S/. 4.50</span> <span class="stock">En stock</span></li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <div class="producto-icon">🔩</div>
+                <h3>Tornillería y Fijaciones</h3>
+                <ul class="categoria-lista">
+                    <li>Tornillos autorroscantes x 100 und <span class="precio">S/. 12.00</span> <span class="stock">En stock</span></li>
+                    <li>Clavos para madera 2" x kg <span class="precio">S/. 6.50</span> <span class="stock">En stock</span></li>
+                    <li>Anclas para concreto x 50 und <span class="precio">S/. 25.00</span> <span class="stock">En stock</span></li>
+                    <li>Tuercas hexagonales x 100 und <span class="precio">S/. 15.00</span> <span class="stock">En stock</span></li>
+                    <li>Arandelas planas x 200 und <span class="precio">S/. 8.00</span> <span class="stock agotado">Agotado</span></li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <div class="producto-icon">🎨</div>
+                <h3>Pinturas y Acabados</h3>
+                <ul class="categoria-lista">
+                    <li>Pintura látex blanco x 4L <span class="precio">S/. 65.00</span> <span class="stock">En stock</span></li>
+                    <li>Esmalte sintético azul x 1L <span class="precio">S/. 22.00</span> <span class="stock">En stock</span></li>
+                    <li>Barniz para madera x 1L <span class="precio">S/. 35.00</span> <span class="stock">En stock</span></li>
+                    <li>Rodillo para pintar 9" <span class="precio">S/. 15.00</span> <span class="stock">En stock</span></li>
+                    <li>Brocha 3" pelo natural <span class="precio">S/. 18.00</span> <span class="stock">En stock</span></li>
+                </ul>
+            </div>
+
+            <div class="categoria-card">
+                <div class="producto-icon">🚿</div>
+                <h3>Plomería</h3>
+                <ul class="categoria-lista">
+                    <li>Tubería PVC 4" x 3m <span class="precio">S/. 32.00</span> <span class="stock">En stock</span></li>
+                    <li>Codo PVC 90° 2" <span class="precio">S/. 3.50</span> <span class="stock">En stock</span></li>
+                    <li>Llave de paso 1/2" <span class="precio">S/. 12.00</span> <span class="stock">En stock</span></li>
+                    <li>Grifo para lavatorio <span class="precio">S/. 45.00</span> <span class="stock">En stock</span></li>
+                    <li>Pegamento PVC x 240ml <span class="precio">S/. 8.50</span> <span class="stock agotado">Agotado</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <style>
+.ver-mas-btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background-color: #ff6b35;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.ver-mas-btn:hover {
+    background-color: #e65c28;
+}
+</style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Ferretería El Martillo. Todos los derechos reservados.</p>
+        <p>Construyendo sueños desde 1999</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>

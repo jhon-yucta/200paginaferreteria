@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Manuales - Ferretería El Martillo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .producto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .producto {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .producto h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .producto .precio {
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .stock {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: white;
+        }
+
+        .stock.disponible {
+            background-color: #28a745;
+        }
+
+        .stock.agotado {
+            background-color: #dc3545;
+        }
+
+        .volver {
+            display: inline-block;
+            margin: 2rem;
+            background-color: #ff6b35;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .volver:hover {
+            background-color: #e65c28;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ferretería El Martillo</h1>
+</header>
+
+<section class="page-header">
+    <h2>🔧 Herramientas Manuales</h2>
+    <p>Explora nuestra variedad de herramientas manuales de alta calidad</p>
+</section>
+
+<main class="producto-grid">
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="martillo.jpg" alt="Martillo de acero 500g">
+        </div>
+        <h3>Martillo de acero 500g</h3>
+        <p class="precio">S/. 25.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="destornillador.jpg" alt="Destornilladores Phillips (set 6 pcs)">
+        </div>
+        <h3>Destornilladores Phillips (set 6 pcs)</h3>
+        <p class="precio">S/. 35.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="alicate.jpg" alt="Alicate universal 8&quot;">
+        </div>
+        <h3>Alicate universal 8"</h3>
+        <p class="precio">S/. 28.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="llaveinglesa.jpg" alt="Llave inglesa 12&quot;">
+        </div>
+        <h3>Llave inglesa 12"</h3>
+        <p class="precio">S/. 45.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="sierra.jpg" alt="Sierra para madera 22&quot;">
+        </div>
+        <h3>Sierra para madera 22"</h3>
+        <p class="precio">S/. 38.00</p>
+        <p class="stock agotado">Agotado</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="cortafrio.jpg" alt="Cortafrío 10&quot;">
+        </div>
+        <h3>Cortafrío 10"</h3>
+        <p class="precio">S/. 18.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="cerrajero.jpg" alt="Tenazas para cerrajero">
+        </div>
+        <h3>Tenazas para cerrajero</h3>
+        <p class="precio">S/. 30.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+
+    <div class="producto">
+        <div class="producto-img-container">
+            <img src="formon.jpg" alt="Formón carpintero 1/2&quot;">
+        </div>
+        <h3>Formón carpintero 1/2"</h3>
+        <p class="precio">S/. 15.00</p>
+        <p class="stock disponible">En stock</p>
+    </div>
+</main>
+
+
+<div style="text-align: center;">
+    <a href="productos.html" class="volver">← Volver a Productos</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ferretería El Martillo. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
